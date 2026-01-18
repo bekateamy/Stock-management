@@ -1,20 +1,29 @@
 import { getProducts, addProduct } from "./products.js";
 
 export async function renderProducts() {
-  const products = await getProducts();
   const el = document.getElementById("products");
+
+  const products = await getProducts();
 
   el.innerHTML = `
     <h2>Products</h2>
-    <input id="pname" placeholder="Product name">
-    <button id="add">Add</button>
+
+    <div>
+      <input id="pname" placeholder="Product name">
+      <button id="addProduct">Add</button>
+    </div>
+
     <table>
+      <tr><th>Name</th></tr>
       ${products.map(p => `<tr><td>${p.name}</td></tr>`).join("")}
     </table>
   `;
 
-  add.onclick = async () => {
-    await addProduct(pname.value);
+  document.getElementById("addProduct").onclick = async () => {
+    const name = document.getElementById("pname").value;
+    if (!name) return alert("Enter product name");
+
+    await addProduct(name);
     renderProducts();
   };
 }
