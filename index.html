@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stock Management</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+<aside>
+  <h3>Stock App</h3>
+  <button onclick="show('products')">Products</button>
+  <button onclick="show('sales')">Sales</button>
+  <button onclick="logout()">Logout</button>
+</aside>
+
+<main>
+  <section id="products"></section>
+  <section id="sales" hidden></section>
+</main>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

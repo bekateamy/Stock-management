@@ -1,0 +1,16 @@
+button {
+  display: block;
+  margin: 10px 0;
+  padding: 8px;
+}
+
+table {
+  width: 100%;
+  background: white;
+  border-collapse: collapse;
+}
+
+td, th {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}

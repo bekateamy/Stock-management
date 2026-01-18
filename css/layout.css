@@ -1,0 +1,15 @@
+body {
+  display: flex;
+}
+
+aside {
+  width: 220px;
+  background: #111;
+  color: white;
+  padding: 20px;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+}
